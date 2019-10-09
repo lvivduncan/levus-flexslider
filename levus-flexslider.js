@@ -11,26 +11,18 @@
         e.preventDefault();
 
         const wrap = A('.lfs-wrap').el;
+        const el = wrap.removeChild(wrap.firstElementChild);
 
-        const el = wrap.firstElementChild;
-
-        const newEl = wrap.removeChild(el);
-
-        wrap.append(newEl);
-        
+        wrap.append(el);
     });
 
     A('.lfs-right').click( e => {
         e.preventDefault();
 
         const wrap = A('.lfs-wrap').el;
+        const el = wrap.removeChild(wrap.lastElementChild);
 
-        const el = wrap.lastElementChild;
-
-        const newEl = wrap.removeChild(el);
-
-        wrap.prepend(newEl);
-
+        wrap.prepend(el);
     });
 
 })();
