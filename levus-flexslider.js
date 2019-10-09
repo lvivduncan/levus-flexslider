@@ -6,24 +6,42 @@
 
     // TODO розміри екрану
     const media = [1100, 776, 410];
-    
-    A('.lfs-left').click( e => {
-        e.preventDefault();
 
-        const wrap = A('.lfs-wrap').el;
-        const el = wrap.removeChild(wrap.firstElementChild);
+    // усі ліві кнопки
+    const lfsLeft = document.querySelectorAll('.lfs-left');
 
-        wrap.append(el);
-    });
+    for(const item of lfsLeft){
 
-    A('.lfs-right').click( e => {
-        e.preventDefault();
+        item.addEventListener('click', e =>{
+            e.preventDefault();
 
-        const wrap = A('.lfs-wrap').el;
-        const el = wrap.removeChild(wrap.lastElementChild);
+            const wrap = item.parentNode.parentNode.querySelector('.lfs-wrap');
+            
+            const el = wrap.removeChild(wrap.firstElementChild);
 
-        wrap.prepend(el);
-    });
+            wrap.append(el);
+
+        });
+
+    }
+
+    // усі праві кнопки
+    const lfsRight = document.querySelectorAll('.lfs-right');
+
+    for(const item of lfsRight){
+
+        item.addEventListener('click', e =>{
+            e.preventDefault();
+
+            const wrap = item.parentNode.parentNode.querySelector('.lfs-wrap');
+            
+            const el = wrap.removeChild(wrap.lastElementChild);
+
+            wrap.prepend(el);
+
+        });
+
+    }
 
 })();
 
