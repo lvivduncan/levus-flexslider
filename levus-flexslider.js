@@ -1,5 +1,11 @@
 
 (()=>{
+
+    // TODO кількість елементів
+    const numbers = [3, 2, 1];
+
+    // TODO розміри екрану
+    const media = [1100, 776, 410];
     
     A('.lfs-left').click( e => {
         e.preventDefault();
@@ -28,3 +34,5 @@
     });
 
 })();
+
+
