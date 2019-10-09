@@ -12,11 +12,17 @@ body{
     background: #f4f4f4;
 }
 
-#wrapper{
+#wrapper,
+#wrapper2,
+#wrapper3{
     height: 350px;
     width: 80%;
     margin: auto;
     background: black;
+}
+
+hr{
+    margin: 10px 0;
 }
 /* demo */
 
