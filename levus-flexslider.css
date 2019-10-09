@@ -1,0 +1,33 @@
+
+.lfs{
+    height: 100%;
+    position: relative;
+}
+
+    .lfs-left{
+        position: absolute; 
+        top: 50%; 
+        left:0; 
+        z-index: 5;
+    }
+
+    .lfs-right{
+        position: absolute; 
+        top: 50%; 
+        right:0; 
+        z-index: 5;
+    }
+
+    .lfs-wrap{
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+
+        .lfs-wrap > div{
+            flex: 1;
+            height: 100%;
+            background: orangered;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }    
